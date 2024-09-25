@@ -62,6 +62,7 @@
             top: 100px; /* Positionné juste en dessous du header */
             width: 100%;
             z-index: 1010; /* S'assurer qu'il est au premier plan */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
         }
 
         /* Liens de navigation */
@@ -89,6 +90,9 @@
         }
 
         section {
+            position: relative;
+            padding-top: 100px; /* Ajustez la valeur en fonction de la hauteur de votre header */
+            margin-top: -100px; /* Même valeur en négatif pour compenser */
             padding: 40px 20px;
             text-align: center;
         }
