@@ -34,17 +34,32 @@
             width: 100%;
             z-index: 1000;
             text-align: center;
-            padding: 20px 20px;
+            padding: 10px 20px; /* Réduit la hauteur du header */
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
         }
 
-        /* Enlever le fond vert pour la barre de navigation */
+        /* Enlever l'espace entre le titre et la description */
+        header h1 {
+            margin: 0; /* Aucune marge pour le titre */
+            font-size: 2.5rem; /* Ajuster la taille si nécessaire */
+        }
+
+        header p {
+            margin: 0; /* Aucune marge pour la phrase */
+            font-size: 1.2rem; /* Ajuster la taille si nécessaire */
+        }
+
+        /* Barre de navigation fixe en dessous du header */
         nav {
+            position: fixed;
+            top: 70px; /* Positionne juste en dessous du header */
+            width: 100%;
             background-color: transparent; /* Aucun fond */
             padding: 10px 0;
             text-align: center;
+            z-index: 999; /* Assure que la barre est au-dessus du contenu */
         }
 
         /* Liens de navigation */
@@ -64,11 +79,6 @@
         /* Ajouter un espace en haut pour éviter le chevauchement avec l'en-tête */
         body {
             padding-top: 160px; /* Ajuster pour correspondre à la hauteur totale de l'en-tête + nav */
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
         }
 
         h2 {
@@ -93,7 +103,7 @@
         }
 
         .cta-button:hover {
-            background-color: #7b8a6c;
+            background-color: #7b8a6c; /* Un peu plus foncé pour le survol */
         }
 
         footer {
@@ -128,11 +138,11 @@
         }
 
         .swiper-slide img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
+            width: 100%; /* Utiliser 100% de la largeur du conteneur */
+            height: auto; /* Garde les proportions de l'image */
+            max-height: 400px; /* Limite la hauteur maximum de l'image pour le diaporama */
+            object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
+            border-radius: 10px; /* Coins arrondis pour les images */
         }
 
         /* Flèches en gris anthracite, positionnées au centre de la hauteur */
@@ -160,7 +170,7 @@
             }
 
             .swiper-container {
-                height: 250px;
+                height: 250px; /* Réduire la hauteur sur les écrans plus petits */
             }
         }
     </style>
@@ -173,7 +183,7 @@
     <p>Votre café de quartier à Lyon</p>
 </header>
 
-<!-- Barre de navigation sans fond -->
+<!-- Barre de navigation fixe en dessous du header -->
 <nav>
     <a href="#menu">Menu</a>
     <a href="#produits">Produits Locaux</a>
@@ -227,7 +237,7 @@
     <p>© 2024 Amour Amour - Tous droits réservés</p>
 </footer>
 
-<!-- Swiper JS -->
+<!-- Inclure Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     // Initialiser Swiper
@@ -247,4 +257,4 @@
 </script>
 
 </body>
-</html>
+</html
