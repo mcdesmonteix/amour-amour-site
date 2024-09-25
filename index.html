@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Amour Amour</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'TT Ramillas', serif;
             margin: 0;
             padding: 0;
-            background-color: #f1ede5; /* Gris beige */
-            color: #313727; /* Vert foncé */
+            background-color: #f1ede5;
+            color: #313727;
         }
 
         header {
             text-align: center;
             padding: 20px;
-            background-color: #f1ede5; /* Gris beige */
+            background-color: #f1ede5;
             position: fixed;
             top: 0;
             left: 0;
@@ -49,10 +50,12 @@
             transition: font-size 0.3s ease;
         }
 
-        .shrunk {
+        .shrunk h1 {
             font-size: 1.25em;
-            transform: translateX(-50%);
-            text-align: left;
+        }
+
+        .shrunk h2 {
+            font-size: 1em;
         }
 
         .swiper-container {
@@ -77,12 +80,7 @@
 
         .swiper-button-next,
         .swiper-button-prev {
-            color: #282728; /* Gris anthracite */
-        }
-
-        .contact-info a {
-            color: #313727; /* Vert foncé */
-            text-decoration: none;
+            color: #282728;
         }
 
         .content {
@@ -91,13 +89,9 @@
             margin-top: 20px;
         }
 
-        /* Style pour la réduction du logo lors du scroll */
-        .shrunk h1 {
-            font-size: 1.25em;
-        }
-
-        .shrunk h2 {
-            font-size: 1em;
+        .contact-info a {
+            color: #313727;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -116,6 +110,7 @@
         </div>
     </header>
 
+    <!-- Diaporama avec tes images -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="images/1_Petite Pension_files.jpg" alt="Photo du café Amour Amour"></div>
@@ -150,23 +145,23 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
             spaceBetween: 10,
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            loop: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
         });
 
-        // Fonction pour gérer le défilement
         window.addEventListener('scroll', function () {
             var header = document.getElementById('header');
             var restaurantName = document.getElementById('restaurant-name');
