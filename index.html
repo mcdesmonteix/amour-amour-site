@@ -96,8 +96,10 @@
             align-items: center;
         }
         .swiper-slide img {
-            width: 100%;
-            height: auto; /* Pour garder les proportions */
+            width: 100%; /* Utiliser 100% de la largeur du conteneur */
+            height: auto; /* Garde les proportions de l'image */
+            max-height: 400px; /* Limite la hauteur maximum de l'image pour le diaporama */
+            object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
             border-radius: 10px; /* Coins arrondis pour les images */
         }
         /* Responsive Design */
