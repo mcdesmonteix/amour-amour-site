@@ -27,11 +27,22 @@
             line-height: 1.6;
         }
         
+        /* Header et navigation fixes */
         header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
             text-align: center;
-            padding: 50px 20px;
+            padding: 20px 20px;
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+        }
+
+        /* Ajouter un espace en haut pour éviter le chevauchement */
+        body {
+            padding-top: 140px; /* Ajuster la valeur pour correspondre à la hauteur de l'en-tête */
         }
         
         h1 {
@@ -45,7 +56,6 @@
         }
 
         nav {
-            text-align: center;
             margin: 20px 0;
         }
 
@@ -156,15 +166,14 @@
 <header>
     <h1>Amour Amour</h1>
     <p>Votre café de quartier à Lyon</p>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#produits">Produits Locaux</a>
+        <a href="#localisation">Où Nous Trouver</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
-
-<nav>
-    <a href="#menu">Menu</a>
-    <a href="#produits">Produits Locaux</a>
-    <a href="#localisation">Où Nous Trouver</a>
-    <a href="#avis">Avis</a>
-    <a href="#contact">Contact</a>
-</nav>
 
 <section id="diaporama">
     <div class="swiper-container">
