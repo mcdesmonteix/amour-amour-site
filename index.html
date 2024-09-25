@@ -74,6 +74,15 @@
             padding: 20px;
             position: relative;
         }
+        /* Lien contact */
+        a.contact-link {
+            color: #313727; /* Vert foncé */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a.contact-link:hover {
+            color: #c8d4b7; /* Vert clair */
+        }
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
@@ -128,8 +137,8 @@
 
 <section id="contact">
     <h2>Contactez-nous</h2>
-    <p>Email : <a href="mailto:contact@amouramour-cafe.com">contact@amouramour-cafe.com</a></p>
-    <p>Téléphone : <a href="tel:+33478123456">04 78 12 34 56</a></p>
+    <p>Email : <a class="contact-link" href="mailto:contact@amouramour-cafe.com">contact@amouramour-cafe.com</a></p>
+    <p>Téléphone : <a class="contact-link" href="tel:+33478123456">04 78 12 34 56</a></p>
 </section>
 
 <footer>
