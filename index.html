@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,20 +18,47 @@
         header {
             text-align: center;
             padding: 20px;
+            background-color: #f1ede5; /* Gris beige */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .menu {
+            margin-top: 80px;
+            padding: 10px 0;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            color: #313727;
+            text-decoration: none;
         }
 
         h1 {
             font-size: 2.5em;
+            transition: font-size 0.3s ease, transform 0.3s ease;
         }
 
         h2 {
             font-size: 1.5em;
-            color: #8e9a7e; /* Vert moyen */
+            color: #8e9a7e;
+            transition: font-size 0.3s ease;
+        }
+
+        .shrunk {
+            font-size: 1.25em;
+            transform: translateX(-50%);
+            text-align: left;
         }
 
         .swiper-container {
             width: 100%;
-            height: 400px; /* Ajuste la hauteur selon tes préférences */
+            height: 400px;
+            margin-top: 100px;
         }
 
         .swiper-slide {
@@ -40,14 +68,13 @@
         }
 
         .swiper-slide img {
-            width: 100%; /* Utiliser 100% de la largeur du conteneur */
-            height: auto; /* Garde les proportions de l'image */
-            max-height: 400px; /* Limite la hauteur maximum de l'image pour le diaporama */
-            object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
-            border-radius: 10px; /* Coins arrondis pour les images */
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
-        /* Styles pour les flèches de navigation */
         .swiper-button-next,
         .swiper-button-prev {
             color: #282728; /* Gris anthracite */
@@ -57,50 +84,105 @@
             color: #313727; /* Vert foncé */
             text-decoration: none;
         }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Style pour la réduction du logo lors du scroll */
+        .shrunk h1 {
+            font-size: 1.25em;
+        }
+
+        .shrunk h2 {
+            font-size: 1em;
+        }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Bienvenue à Amour Amour</h1>
-    <h2>Café de quartier avec des produits locaux et faits maison</h2>
-</header>
+    <header id="header">
+        <h1 id="restaurant-name">Amour Amour</h1>
+        <h2 id="tagline">Votre café de quartier à Lyon</h2>
+        <div class="menu">
+            <a href="#menu">Menu</a>
+            <a href="#produits-locaux">Produits Locaux</a>
+            <a href="#ou-nous-trouver">Où Nous Trouver</a>
+            <a href="#avis">Avis</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
 
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/1_Petite Pension_files.jpg" alt="Photo du café Amour Amour"></div>
-        <div class="swiper-slide"><img src="images/6_Petite Pension_files.jpg" alt="Produits locaux"></div>
-        <div class="swiper-slide"><img src="images/2_Petite Pension_files.jpg" alt="Ambiance café"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1_Petite Pension_files.jpg" alt="Photo du café Amour Amour"></div>
+            <div class="swiper-slide"><img src="images/2_Petite Pension_files.jpg" alt="Produits locaux"></div>
+            <div class="swiper-slide"><img src="images/3_Petite Pension_files.jpg" alt="Ambiance café"></div>
+            <div class="swiper-slide"><img src="images/4_Petite Pension_files.jpg" alt="Famille et enfants bienvenues"></div>
+            <div class="swiper-slide"><img src="images/5_Petite Pension_files.jpg" alt="Vegan friendly"></div>
+            <div class="swiper-slide"><img src="images/6_Petite Pension_files.jpg" alt="Lyon, croix-rousse, pentes"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-    <!-- Ajout des boutons de navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-</div>
 
-<div class="contact-info" style="text-align: center; margin-top: 20px;">
-    <a href="tel:+33000000000">Voir le menu</a> | 
-    <a href="mailto:contact@amouramour.com">Contactez-nous</a>
-</div>
+    <div class="content">
+        <h2 id="produits-locaux">Produits Locaux</h2>
+        <p>Amour Amour vous propose des produits locaux et faits maison, préparés avec soin pour vous offrir des saveurs authentiques et une expérience chaleureuse.</p>
 
-<h2>Produits Locaux</h2>
-<p>Découvrez nos produits locaux soigneusement sélectionnés pour vous offrir le meilleur de notre région.</p>
+        <h2 id="menu">Menu</h2>
+        <p>Découvrez notre menu varié, conçu à partir des meilleurs ingrédients locaux. Que vous soyez d’humeur pour un café corsé, un thé délicat, ou une pâtisserie gourmande, nous avons ce qu’il vous faut.</p>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.js"></script>
-<script>
-    // Initialiser Swiper
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        loop: true, // Pour un diaporama en boucle
-        autoplay: {
-            delay: 3500, // Temps en millisecondes entre chaque diapositive
-            disableOnInteraction: false, // Le défilement automatique continue même après une interaction
-        },
-    });
-</script>
+        <h2 id="ou-nous-trouver">Où Nous Trouver</h2>
+        <p>Nous sommes situés à la Croix-Rousse, juste au-dessus de la mairie du 1er arrondissement, à quelques pas de l'amphithéâtre des Trois Gaules et du Jardin des Plantes.</p>
+
+        <h2 id="avis">Avis</h2>
+        <p>Nos clients adorent l’ambiance conviviale et les délicieux produits que nous proposons. Venez découvrir par vous-même ce qui fait d’Amour Amour un lieu incontournable à Lyon.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>Pour toute question ou réservation, n’hésitez pas à nous contacter !</p>
+        <div class="contact-info">
+            <a href="tel:+33000000000">Voir le menu</a> |
+            <a href="mailto:contact@amouramour.com">Contactez-nous</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Fonction pour gérer le défilement
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('header');
+            var restaurantName = document.getElementById('restaurant-name');
+            var tagline = document.getElementById('tagline');
+
+            if (window.scrollY > 50) {
+                restaurantName.classList.add('shrunk');
+                tagline.classList.add('shrunk');
+                header.style.opacity = '0.9';
+            } else {
+                restaurantName.classList.remove('shrunk');
+                tagline.classList.remove('shrunk');
+                header.style.opacity = '1';
+            }
+        });
+    </script>
 </body>
+
 </html>
