@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amour Amour, votre café de quartier à Lyon, dans le quartier de la Croix-Rousse. Produits locaux et faits maison dans un cadre authentique.">
-    <meta name="keywords" content="Amour Amour, café Lyon, produits locaux, Croix-Rousse, faits maison, jardin des plantes, amphithéâtre des 3 Gaules">
-    <title>Amour Amour - Café de Quartier à Lyon</title>
+    <meta name="description" content="Amour Amour, votre café de quartier à Lyon, avec des produits locaux et faits maison.">
+    <title>Amour Amour - Café à Lyon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Pour les icônes -->
     <style>
         @font-face {
             font-family: 'TT Ramillas';
-            src: url('fonts/TT Ramillas Trial Regular.ttf') format('truetype'); /* Spécifiez le chemin du fichier */
+            src: url('fonts/TT Ramillas Trial Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
         body {
-            font-family: 'TT Ramillas', serif; /* Utilisation de TT Ramillas */
+            font-family: 'TT Ramillas', serif;
             margin: 0;
             padding: 0;
             background-color: #fcfcef; /* Crème */
@@ -22,117 +22,117 @@
             line-height: 1.6;
         }
         header {
+            text-align: center;
+            padding: 50px 20px;
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
-            text-align: center;
-            padding: 20px;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #282728; /* Gris anthracite pour contraste */
-            flex-wrap: wrap;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        h1 {
+            font-size: 2.5rem;
             margin: 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
         }
-        nav ul li a {
-            color: #f1ede5; /* Gris beige pour les liens */
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #313727; /* Vert foncé */
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #c8d4b7; /* Vert clair */
         }
         section {
-            padding: 20px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #8e9a7e; /* Vert moyen */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #7b8a6c; /* Un peu plus foncé pour le survol */
         }
         footer {
             background-color: #282728; /* Gris anthracite */
             color: #f1ede5; /* Gris beige */
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            position: relative;
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 5px 0;
+            h1 {
+                font-size: 2rem;
             }
-            section {
-                padding: 10px;
+            h2 {
+                font-size: 1.5rem;
             }
-        }
-        /* Accessibilité : Améliorer le contraste */
-        header, footer {
-            background-color: #313727; /* Vert foncé pour accessibilité */
-        }
-        /* Accessibilité : liens visibles au clavier */
-        a:focus {
-            outline: 3px solid #c8d4b7; /* Vert clair */
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 
-<header role="banner">
-    <h1>Amour Amour - Café de Quartier à Lyon</h1>
-    <p>Situé à la Croix-Rousse, au cœur du 1er arrondissement, à deux pas du jardin des plantes et de l'amphithéâtre des 3 Gaules.</p>
+<header>
+    <h1>Amour Amour</h1>
+    <p>Votre café de quartier à Lyon</p>
 </header>
 
-<nav role="navigation">
-    <ul>
-        <li><a href="#menu">Notre Menu</a></li>
-        <li><a href="#produits">Nos Produits Locaux</a></li>
-        <li><a href="#localisation">Où Nous Trouver</a></li>
-        <li><a href="#avis">Avis Clients</a></li>
-        <li><a href="#contact">Nous Contacter</a></li>
-    </ul>
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#produits">Produits Locaux</a>
+    <a href="#localisation">Où Nous Trouver</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section id="menu">
     <h2>Notre Menu</h2>
-    <p>Amour Amour propose une sélection de boissons et de plats faits maison, confectionnés avec des ingrédients locaux et de saison. Du café bio torréfié à Lyon aux pâtisseries artisanales, chaque produit est conçu avec amour pour vous offrir une expérience authentique.</p>
-    <ul>
-        <li>Café bio - 2,50€</li>
-        <li>Latte macchiato - 3,50€</li>
-        <li>Pâtisserie du jour - 4,00€</li>
-        <li>Tarte salée maison - 7,50€</li>
-        <li>Salade de saison - 8,00€</li>
-    </ul>
+    <p>Une sélection de boissons et plats faits maison avec des ingrédients locaux.</p>
+    <button class="cta-button">Voir le menu</button>
 </section>
 
 <section id="produits">
-    <h2>Nos Produits Locaux</h2>
-    <p>Chez Amour Amour, nous sommes fiers de collaborer avec des producteurs locaux pour vous offrir des produits frais et de qualité. Nos ingrédients proviennent de fermes et d’artisans de la région Rhône-Alpes, et tout est préparé sur place.</p>
+    <h2>Produits Locaux</h2>
+    <p>Nous collaborons avec des producteurs locaux pour vous offrir des produits frais.</p>
 </section>
 
 <section id="localisation">
     <h2>Où Nous Trouver</h2>
-    <p>Vous nous trouverez à la Croix-Rousse, juste au-dessus de la mairie du 1er arrondissement, au pied du jardin des plantes et de l'amphithéâtre des 3 Gaules.</p>
-    <p>Adresse : 12 rue Amour, 69001 Lyon</p>
+    <p>12 rue Amour, 69001 Lyon</p>
 </section>
 
 <section id="avis">
     <h2>Avis Clients</h2>
-    <p>« Un café de quartier chaleureux, avec des produits locaux délicieux ! » - Marie D.</p>
-    <p>« J'adore l'ambiance et la qualité des plats. Une vraie pépite à Lyon. » - Jean F.</p>
+    <p>« Un café chaleureux avec des produits délicieux ! »</p>
+    <p>« Une vraie pépite à Lyon. »</p>
 </section>
 
 <section id="contact">
-    <h2>Nous Contacter</h2>
-    <p>Pour toute question, n'hésitez pas à nous contacter :</p>
+    <h2>Contactez-nous</h2>
     <p>Email : <a href="mailto:contact@amouramour-cafe.com">contact@amouramour-cafe.com</a></p>
     <p>Téléphone : <a href="tel:+33478123456">04 78 12 34 56</a></p>
 </section>
 
-<footer role="contentinfo">
+<footer>
     <p>© 2024 Amour Amour - Tous droits réservés</p>
 </footer>
 
