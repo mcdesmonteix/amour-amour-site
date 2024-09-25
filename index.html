@@ -3,89 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Amour Amour</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.css" />
+    <meta name="description" content="Amour Amour, votre café de quartier à Lyon, avec des produits locaux et faits maison.">
+    <title>Amour Amour - Café à Lyon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Pour les icônes -->
+    <!-- Inclure Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
+        @font-face {
+            font-family: 'TT Ramillas';
+            src: url('fonts/TT Ramillas Trial Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             font-family: 'TT Ramillas', serif;
             margin: 0;
             padding: 0;
-            background-color: #f1ede5; /* Gris beige */
-            color: #313727; /* Vert foncé */
+            background-color: #fcfcef; /* Crème */
+            color: #282728; /* Gris anthracite */
+            line-height: 1.6;
         }
-
         header {
             text-align: center;
-            padding: 20px;
+            padding: 50px 20px;
+            background-color: #8e9a7e; /* Vert moyen */
+            color: white;
         }
-
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
+            margin: 0;
         }
-
         h2 {
-            font-size: 1.5em;
-            color: #8e9a7e; /* Vert moyen */
+            font-size: 2rem;
+            margin: 20px 0;
         }
-
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #313727; /* Vert foncé */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #c8d4b7; /* Vert clair */
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #8e9a7e; /* Vert moyen */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #7b8a6c; /* Un peu plus foncé pour le survol */
+        }
+        footer {
+            background-color: #282728; /* Gris anthracite */
+            color: #f1ede5; /* Gris beige */
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+        /* Lien contact */
+        a.contact-link {
+            color: #313727; /* Vert foncé */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a.contact-link:hover {
+            color: #c8d4b7; /* Vert clair */
+        }
+        /* Styles pour le diaporama */
         .swiper-container {
             width: 100%;
             height: 400px; /* Ajuste la hauteur selon tes préférences */
         }
-
         .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
         .swiper-slide img {
-            width: 100%; /* Utiliser 100% de la largeur du conteneur */
-            height: auto; /* Garde les proportions de l'image */
-            max-height: 400px; /* Limite la hauteur maximum de l'image pour le diaporama */
-            object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
+            width: 100%;
+            height: auto; /* Pour garder les proportions */
             border-radius: 10px; /* Coins arrondis pour les images */
         }
-
-        /* Styles pour les flèches de navigation */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #282728; /* Gris anthracite */
-        }
-
-        .contact-info a {
-            color: #313727; /* Vert foncé */
-            text-decoration: none;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            .swiper-container {
+                height: 250px; /* Réduire la hauteur sur les écrans plus petits */
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Bienvenue à Amour Amour</h1>
-    <h2>Café de quartier avec des produits locaux et faits maison</h2>
+    <h1>Amour Amour</h1>
+    <p>Votre café de quartier à Lyon</p>
 </header>
 
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/photo1.jpg" alt="Photo du café Amour Amour"></div>
-        <div class="swiper-slide"><img src="images/photo2.jpg" alt="Produits locaux"></div>
-        <div class="swiper-slide"><img src="images/photo3.jpg" alt="Ambiance café"></div>
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#produits">Produits Locaux</a>
+    <a href="#localisation">Où Nous Trouver</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="diaporama">
+    <h2>Galerie Photo</h2>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/photo1.jpg" alt="Description de la photo 1"></div>
+            <div class="swiper-slide"><img src="images/photo2.jpg" alt="Description de la photo 2"></div>
+            <div class="swiper-slide"><img src="images/photo3.jpg" alt="Description de la photo 3"></div>
+            <!-- Ajoute d'autres photos ici -->
+        </div>
+        <!-- Ajoutez les boutons de navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
-    <!-- Ajout des boutons de navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-</div>
+</section>
 
-<div class="contact-info" style="text-align: center; margin-top: 20px;">
-    <a href="tel:+33000000000">Voir le menu</a> | 
-    <a href="mailto:contact@amouramour.com">Contactez-nous</a>
-</div>
+<section id="menu">
+    <h2>Notre Menu</h2>
+    <p>Une sélection de boissons et plats faits maison avec des ingrédients locaux.</p>
+    <button class="cta-button">Voir le menu</button>
+</section>
 
-<h2>Produits Locaux</h2>
-<p>Découvrez nos produits locaux soigneusement sélectionnés pour vous offrir le meilleur de notre région.</p>
+<section id="produits">
+    <h2>Produits Locaux</h2>
+    <p>Nous collaborons avec des producteurs locaux pour vous offrir des produits frais.</p>
+</section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/10.0.0/swiper-bundle.min.js"></script>
+<section id="localisation">
+    <h2>Où Nous Trouver</h2>
+    <p>12 rue Amour, 69001 Lyon</p>
+</section>
+
+<section id="avis">
+    <h2>Avis Clients</h2>
+    <p>« Un café chaleureux avec des produits délicieux ! »</p>
+    <p>« Une vraie pépite à Lyon. »</p>
+</section>
+
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Email : <a class="contact-link" href="mailto:contact@amouramour-cafe.com">contact@amouramour-cafe.com</a></p>
+    <p>Téléphone : <a class="contact-link" href="tel:+33478123456">04 78 12 34 56</a></p>
+</section>
+
+<footer>
+    <p>© 2024 Amour Amour - Tous droits réservés</p>
+</footer>
+
+<!-- Inclure Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     // Initialiser Swiper
     var swiper = new Swiper('.swiper-container', {
@@ -95,11 +193,11 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        loop: true, // Pour un diaporama en boucle
-        autoplay: {
-            delay: 3000, // Temps en millisecondes entre chaque diapositive
-            disableOnInteraction: false, // Le défilement automatique continue même après une interaction
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
+        loop: true, // Pour un diaporama en boucle
     });
 </script>
 </body>
