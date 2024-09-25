@@ -28,7 +28,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #f1ede5;
+            background-color: #8e9a7e; /* Vert moyen pour le header */
             position: fixed;
             top: 0;
             left: 0;
@@ -44,18 +44,19 @@
 
         .menu a {
             margin: 0 15px;
-            color: #313727;
+            color: #fcfcef; /* Crème pour les liens */
             text-decoration: none;
         }
 
         h1 {
             font-size: 2.5em;
+            color: #fcfcef; /* Crème pour le texte */
             transition: font-size 0.3s ease, transform 0.3s ease;
         }
 
         h2 {
             font-size: 1.5em;
-            color: #8e9a7e;
+            color: #c8d4b7; /* Vert clair */
             transition: font-size 0.3s ease;
         }
 
@@ -84,6 +85,12 @@
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
+        }
+
+        /* Changement des flèches du diaporama (s'il y en avait) en gris anthracite */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #282728;
         }
     </style>
 </head>
@@ -122,8 +129,8 @@
         <h2 id="contact">Contact</h2>
         <p>Pour toute question ou réservation, n’hésitez pas à nous contacter !</p>
         <div class="contact-info">
-            <a href="tel:+33000000000">Voir le menu</a> |
-            <a href="mailto:contact@amouramour.com">Contactez-nous</a>
+            <a href="tel:+33000000000" style="color: #313727;">Voir le menu</a> |
+            <a href="mailto:contact@amouramour.com" style="color: #313727;">Contactez-nous</a>
         </div>
     </div>
 
