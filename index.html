@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Amour Amour, votre café de quartier à Lyon, avec des produits locaux et faits maison.">
     <title>Amour Amour - Café à Lyon</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Pour les icônes -->
+    
     <!-- Inclure Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Importer la police TT Ramillas -->
     <style>
         @font-face {
             font-family: 'TT Ramillas';
@@ -15,6 +17,7 @@
             font-weight: normal;
             font-style: normal;
         }
+        
         body {
             font-family: 'TT Ramillas', serif;
             margin: 0;
@@ -23,24 +26,29 @@
             color: #282728; /* Gris anthracite */
             line-height: 1.6;
         }
+        
         header {
             text-align: center;
             padding: 50px 20px;
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
         }
+        
         h1 {
             font-size: 2.5rem;
             margin: 0;
         }
+
         h2 {
             font-size: 2rem;
             margin: 20px 0;
         }
+
         nav {
             text-align: center;
             margin: 20px 0;
         }
+
         nav a {
             margin: 0 15px;
             color: #313727; /* Vert foncé */
@@ -49,13 +57,16 @@
             font-size: 1.1rem;
             transition: color 0.3s ease;
         }
+
         nav a:hover {
             color: #c8d4b7; /* Vert clair */
         }
+
         section {
             padding: 40px 20px;
             text-align: center;
         }
+
         .cta-button {
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
@@ -66,9 +77,11 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         .cta-button:hover {
-            background-color: #7b8a6c; /* Un peu plus foncé pour le survol */
+            background-color: #7b8a6c;
         }
+
         footer {
             background-color: #282728; /* Gris anthracite */
             color: #f1ede5; /* Gris beige */
@@ -76,50 +89,64 @@
             padding: 20px;
             position: relative;
         }
-        /* Lien contact */
+
         a.contact-link {
             color: #313727; /* Vert foncé */
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         a.contact-link:hover {
             color: #c8d4b7; /* Vert clair */
         }
+
         /* Styles pour le diaporama */
-            .swiper-container {
-                width: 100%;
-                height: 400px; /* Ajuste la hauteur selon tes préférences */
-            }
-            .swiper-slide {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .swiper-slide img {
-                width: 100%; /* Utiliser 100% de la largeur du conteneur */
-                height: auto; /* Garde les proportions de l'image */
-                max-height: 400px; /* Limite la hauteur maximum de l'image pour le diaporama */
-                object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
-                border-radius: 10px; /* Coins arrondis pour les images */
-            }
-        /* Responsive Design */
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Flèches en gris anthracite */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #282728;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
             }
+
             h2 {
                 font-size: 1.5rem;
             }
+
             .cta-button {
                 padding: 10px 20px;
                 font-size: 1rem;
             }
+
             .swiper-container {
-                height: 250px; /* Réduire la hauteur sur les écrans plus petits */
+                height: 250px;
             }
         }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -141,9 +168,8 @@
             <div class="swiper-slide"><img src="images/photo1.jpg" alt="Description de la photo 1"></div>
             <div class="swiper-slide"><img src="images/photo2.jpg" alt="Description de la photo 2"></div>
             <div class="swiper-slide"><img src="images/photo3.jpg" alt="Description de la photo 3"></div>
-            <!-- Ajoute d'autres photos ici -->
         </div>
-        <!-- Ajoutez les boutons de navigation -->
+        <!-- Boutons de navigation -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
@@ -181,7 +207,7 @@
     <p>© 2024 Amour Amour - Tous droits réservés</p>
 </footer>
 
-<!-- Inclure Swiper JS -->
+<!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     // Initialiser Swiper
@@ -191,18 +217,14 @@
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-                color: #282728; /* Gris anthracite */
         },
-        //pagination: {
-        //    el: '.swiper-pagination',
-        //    clickable: true,
-        //},
-        loop: true, // Pour un diaporama en boucle
+        loop: true, // Diaporama en boucle
         autoplay: {
-            delay: 3000, // Temps en millisecondes entre chaque diapositive
-            disableOnInteraction: false, // Le défilement automatique continue même après une interaction
-    },
+            delay: 3000,
+            disableOnInteraction: false,
+        },
     });
 </script>
+
 </body>
 </html>
