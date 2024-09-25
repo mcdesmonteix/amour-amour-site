@@ -27,7 +27,7 @@
             line-height: 1.6;
         }
         
-        /* Header et navigation fixes */
+        /* Header fixe en haut de la page */
         header {
             position: fixed;
             top: 0;
@@ -37,28 +37,17 @@
             padding: 20px 20px;
             background-color: #8e9a7e; /* Vert moyen */
             color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
         }
 
-        /* Ajouter un espace en haut pour éviter le chevauchement */
-        body {
-            padding-top: 140px; /* Ajuster la valeur pour correspondre à la hauteur de l'en-tête */
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin: 20px 0;
-        }
-
+        /* Enlever le fond vert pour la barre de navigation */
         nav {
-            margin: 20px 0;
+            background-color: transparent; /* Aucun fond */
+            padding: 10px 0;
+            text-align: center;
         }
 
+        /* Liens de navigation */
         nav a {
             margin: 0 15px;
             color: #313727; /* Vert foncé */
@@ -70,6 +59,21 @@
 
         nav a:hover {
             color: #c8d4b7; /* Vert clair */
+        }
+
+        /* Ajouter un espace en haut pour éviter le chevauchement avec l'en-tête */
+        body {
+            padding-top: 160px; /* Ajuster pour correspondre à la hauteur totale de l'en-tête + nav */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin: 20px 0;
         }
 
         section {
@@ -167,14 +171,16 @@
 <header>
     <h1>Amour Amour</h1>
     <p>Votre café de quartier à Lyon</p>
-    <nav>
-        <a href="#menu">Menu</a>
-        <a href="#produits">Produits Locaux</a>
-        <a href="#localisation">Où Nous Trouver</a>
-        <a href="#avis">Avis</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
+
+<!-- Barre de navigation sans fond -->
+<nav>
+    <a href="#menu">Menu</a>
+    <a href="#produits">Produits Locaux</a>
+    <a href="#localisation">Où Nous Trouver</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <section id="diaporama">
     <div class="swiper-container">
