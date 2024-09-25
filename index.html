@@ -120,10 +120,14 @@
             border-radius: 10px;
         }
 
-        /* Flèches en gris anthracite */
+        /* Flèches en gris anthracite, positionnées au centre de la hauteur */
         .swiper-button-next,
         .swiper-button-prev {
-            color: #282728;
+            color: #282728; /* Gris anthracite */
+            top: 50%;
+            transform: translateY(-50%); /* Centrer verticalement */
+            width: 44px;
+            height: 44px;
         }
 
         @media (max-width: 768px) {
@@ -218,7 +222,7 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        loop: true, // Diaporama en boucle
+        loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
