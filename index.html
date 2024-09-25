@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Amour Amour</title>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <!-- Importation de la police TT Ramillas -->
+    <style>
+        @font-face {
+            font-family: 'TTRamillas';
+            src: url('fonts/TT Ramillas Trial Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
     <style>
         body {
-            font-family: 'TT Ramillas', serif;
+            font-family: 'TTRamillas', serif;
             margin: 0;
             padding: 0;
             background-color: #f1ede5;
@@ -58,40 +67,23 @@
             font-size: 1em;
         }
 
-        .swiper-container {
-            width: 100%;
-            height: 400px;
-            margin-top: 100px;
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #282728;
-        }
-
         .content {
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
+            margin-top: 150px;
         }
 
         .contact-info a {
             color: #313727;
             text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -110,32 +102,22 @@
         </div>
     </header>
 
-    <!-- Diaporama avec tes images -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/1_Petite Pension_files.jpg" alt="Photo du café Amour Amour"></div>
-            <div class="swiper-slide"><img src="images/2_Petite Pension_files.jpg" alt="Produits locaux"></div>
-            <div class="swiper-slide"><img src="images/3_Petite Pension_files.jpg" alt="Ambiance café"></div>
-            <div class="swiper-slide"><img src="images/4_Petite Pension_files.jpg" alt="Famille et enfants bienvenues"></div>
-            <div class="swiper-slide"><img src="images/5_Petite Pension_files.jpg" alt="Vegan friendly"></div>
-            <div class="swiper-slide"><img src="images/6_Petite Pension_files.jpg" alt="Lyon, croix-rousse, pentes"></div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-
     <div class="content">
         <h2 id="produits-locaux">Produits Locaux</h2>
         <p>Amour Amour vous propose des produits locaux et faits maison, préparés avec soin pour vous offrir des saveurs authentiques et une expérience chaleureuse.</p>
+        <img src="images/produits-locaux.jpg" alt="Produits locaux">
 
         <h2 id="menu">Menu</h2>
         <p>Découvrez notre menu varié, conçu à partir des meilleurs ingrédients locaux. Que vous soyez d’humeur pour un café corsé, un thé délicat, ou une pâtisserie gourmande, nous avons ce qu’il vous faut.</p>
+        <img src="images/menu.jpg" alt="Menu du café">
 
         <h2 id="ou-nous-trouver">Où Nous Trouver</h2>
         <p>Nous sommes situés à la Croix-Rousse, juste au-dessus de la mairie du 1er arrondissement, à quelques pas de l'amphithéâtre des Trois Gaules et du Jardin des Plantes.</p>
+        <img src="images/emplacement.jpg" alt="Emplacement du café">
 
         <h2 id="avis">Avis</h2>
         <p>Nos clients adorent l’ambiance conviviale et les délicieux produits que nous proposons. Venez découvrir par vous-même ce qui fait d’Amour Amour un lieu incontournable à Lyon.</p>
+        <img src="images/avis.jpg" alt="Avis clients">
 
         <h2 id="contact">Contact</h2>
         <p>Pour toute question ou réservation, n’hésitez pas à nous contacter !</p>
@@ -145,23 +127,8 @@
         </div>
     </div>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Script pour le header rétrécissant -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-        });
-
         window.addEventListener('scroll', function () {
             var header = document.getElementById('header');
             var restaurantName = document.getElementById('restaurant-name');
@@ -178,6 +145,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
