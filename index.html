@@ -103,6 +103,11 @@
             object-fit: cover; /* Pour s'assurer que l'image couvre tout l'espace sans déformer */
             border-radius: 10px; /* Coins arrondis pour les images */
         }
+        /* Styles pour les flèches de navigation */
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: #282728; /* Gris anthracite */
+            }
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
@@ -194,7 +199,9 @@
         spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev' {
+                color: #282728; /* Gris anthracite */
+            }
         },
         //pagination: {
         //    el: '.swiper-pagination',
