@@ -41,15 +41,19 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
         }
 
-        /* Liens de navigation dans le header */
-        nav {
-            background-color: transparent; /* Aucun fond */
+        /* Bandeau de navigation */
+        .nav-banner {
+            background-color: #fcfcef; /* Crème */
             padding: 10px 0;
             text-align: center;
+            position: fixed;
+            top: 100px; /* Positionné juste en dessous du header */
+            width: 100%;
+            z-index: 999; /* S'assurer qu'il est sous le header */
         }
 
         /* Liens de navigation */
-        nav a {
+        .nav-banner a {
             margin: 0 15px;
             color: #313727; /* Vert foncé */
             text-decoration: none;
@@ -58,7 +62,7 @@
             transition: color 0.3s ease;
         }
 
-        nav a:hover {
+        .nav-banner a:hover {
             color: #c8d4b7; /* Vert clair */
         }
 
@@ -172,15 +176,16 @@
 <header>
     <h1>Amour Amour</h1>
     <p class="subtitle">Votre café de quartier au 🤍 des pentes</p>
-    <!-- Barre de navigation dans le header -->
-    <nav>
-        <a href="#menu">Menu</a>
-        <a href="#produits">Produits Locaux</a>
-        <a href="#localisation">Où Nous Trouver</a>
-        <a href="#avis">Avis</a>
-        <a href="#contact">Contact</a>
-    </nav>
 </header>
+
+<!-- Bandeau de navigation -->
+<div class="nav-banner">
+    <a href="#menu">Menu</a>
+    <a href="#produits">Produits Locaux</a>
+    <a href="#localisation">Où Nous Trouver</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
+</div>
 
 <section id="diaporama">
     <div class="swiper-container">
