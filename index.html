@@ -25,6 +25,7 @@
             background-color: #fcfcef; /* Crème */
             color: #282728; /* Gris anthracite */
             line-height: 1.6;
+            padding-top: 160px; /* Ajuster pour éviter le chevauchement avec l'en-tête */
         }
         
         /* Header fixe en haut de la page */
@@ -40,7 +41,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre */
         }
 
-        /* Enlever le fond vert pour la barre de navigation */
+        /* Liens de navigation dans le header */
         nav {
             background-color: transparent; /* Aucun fond */
             padding: 10px 0;
@@ -59,11 +60,6 @@
 
         nav a:hover {
             color: #c8d4b7; /* Vert clair */
-        }
-
-        /* Ajouter un espace en haut pour éviter le chevauchement avec l'en-tête */
-        body {
-            padding-top: 160px; /* Ajuster pour correspondre à la hauteur totale de l'en-tête + nav */
         }
 
         h1 {
@@ -171,16 +167,15 @@
 <header>
     <h1>Amour Amour</h1>
     <p>Votre café de quartier à Lyon</p>
+    <!-- Barre de navigation dans le header -->
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#produits">Produits Locaux</a>
+        <a href="#localisation">Où Nous Trouver</a>
+        <a href="#avis">Avis</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
-
-<!-- Barre de navigation sans fond -->
-<nav>
-    <a href="#menu">Menu</a>
-    <a href="#produits">Produits Locaux</a>
-    <a href="#localisation">Où Nous Trouver</a>
-    <a href="#avis">Avis</a>
-    <a href="#contact">Contact</a>
-</nav>
 
 <section id="diaporama">
     <div class="swiper-container">
