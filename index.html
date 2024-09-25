@@ -6,15 +6,18 @@
     <meta name="description" content="Amour Amour, votre café de quartier à Lyon, dans le quartier de la Croix-Rousse. Produits locaux et faits maison dans un cadre authentique.">
     <meta name="keywords" content="Amour Amour, café Lyon, produits locaux, Croix-Rousse, faits maison, jardin des plantes, amphithéâtre des 3 Gaules">
     <title>Amour Amour - Café de Quartier à Lyon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ramillas:wght@400;700&display=swap" rel="stylesheet"> <!-- Import de la police -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Ramillas', serif; /* Utilisation de TT Ramillas */
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #fcfcef; /* Crème */
+            color: #282728; /* Gris anthracite */
+            line-height: 1.6;
         }
         header {
-            background-color: #d29a89;
+            background-color: #8e9a7e; /* Vert moyen */
             color: white;
             text-align: center;
             padding: 20px;
@@ -22,18 +25,20 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #282728; /* Gris anthracite pour contraste */
+            flex-wrap: wrap;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
             margin: 0 10px;
         }
         nav ul li a {
-            color: white;
+            color: #f1ede5; /* Gris beige pour les liens */
             text-decoration: none;
             font-weight: bold;
         }
@@ -41,24 +46,42 @@
             padding: 20px;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #282728; /* Gris anthracite */
+            color: #f1ede5; /* Gris beige */
             text-align: center;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+            section {
+                padding: 10px;
+            }
+        }
+        /* Accessibilité : Améliorer le contraste */
+        header, footer {
+            background-color: #313727; /* Vert foncé pour accessibilité */
+        }
+        /* Accessibilité : liens visibles au clavier */
+        a:focus {
+            outline: 3px solid #c8d4b7; /* Vert clair */
+        }
     </style>
 </head>
 <body>
 
-<header>
+<header role="banner">
     <h1>Amour Amour - Café de Quartier à Lyon</h1>
     <p>Situé à la Croix-Rousse, au cœur du 1er arrondissement, à deux pas du jardin des plantes et de l'amphithéâtre des 3 Gaules.</p>
 </header>
 
-<nav>
+<nav role="navigation">
     <ul>
         <li><a href="#menu">Notre Menu</a></li>
         <li><a href="#produits">Nos Produits Locaux</a></li>
@@ -100,11 +123,11 @@
 <section id="contact">
     <h2>Nous Contacter</h2>
     <p>Pour toute question, n'hésitez pas à nous contacter :</p>
-    <p>Email : contact@amouramour-cafe.com</p>
-    <p>Téléphone : 04 78 12 34 56</p>
+    <p>Email : <a href="mailto:contact@amouramour-cafe.com">contact@amouramour-cafe.com</a></p>
+    <p>Téléphone : <a href="tel:+33478123456">04 78 12 34 56</a></p>
 </section>
 
-<footer>
+<footer role="contentinfo">
     <p>© 2024 Amour Amour - Tous droits réservés</p>
 </footer>
 
